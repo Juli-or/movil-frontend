@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Space+Grotesk:wght@400;600&display=swap');
+
+:root {
+    /* Paleta de colores Limpia y Profesional (Agrosoft) */
+    --primary-green:#45b810; /* Verde principal para títulos y acentos */
+    --accent-blue: #007bff; /* Azul para botones de edición */
+    --error-red: #dc3545; /* Rojo para botones de eliminación */
+    --bg-light: #f4f4f7; /* Fondo de la página */
+    --text-dark: #333333; 
+    --card-light-bg: #FFFFFF; /* Fondo de tarjetas */
+    --input-bg: #f9f9f9; 
+    --input-border: #e0e0e0; /* Borde suave */
+    --focus-glow: rgba(76, 175, 80, 0.3); 
+    --shadow-subtle: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif !important;
+}
+
+body {
+    background-color: var(--bg-light);
+}
+
+main {
+    max-width: 1999px; 
+    margin: 0 auto; 
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-green);
+    border-bottom: 2px solid var(--primary-green); 
+    padding-bottom: 6px; 
+    margin-bottom: 10px; 
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.2rem; 
+}
+
+input:not([type="submit"]):not([type="button"]), 
+select {
+    border-radius: 6px; 
+    border: 1px solid var(--input-border);
+    padding: 6px 8px; 
+    color: var(--text-dark);
+    background-color: var(--input-bg); 
+    font-size: 0.85em; 
+    width: 100%;
+    transition: all 0.2s;
+}
+
+input:focus:not([type="submit"]):not([type="button"]), select:focus {
+    border-color: var(--primary-green);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--focus-glow); 
+    background-color: var(--card-light-bg);
+}
+
+label {
+    font-size: 0.75em; 
+    font-weight: 600;
+    color: var(--text-dark); 
+    margin-bottom: 2px;
+    display: block;
+}
+
+.button, input[type="submit"], input[type="button"] {
+    height: 36px; 
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    color: rgb(0, 39, 13) !important; 
+    font-weight: 600; 
+    font-size: 0.95em; 
+    background: linear-gradient(90deg, #71f65c,#45b810);
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 8px;
+    color: white;
+    box-shadow: 0 6px 14px rgba(59, 130, 246, 0.16);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+
+.contenedor {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: stretch; 
+    margin: 15px auto; 
+    max-width: 1400px; 
+    width: 100%;
+    flex-wrap: wrap; 
+    gap: 12px; 
+}
+
+.contenedor > div {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px; 
+    padding: 12px; 
+    box-shadow: var(--shadow-subtle); 
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contenedor > div.anadir {
+    flex: 1 1 55%;
+    min-height: 0;
+}
+
+
+.contenedor > div.Editar,
+.contenedor > div.eliminar {
+    flex: 1 1 21%; 
+    min-height: 0; 
+}
+
+
+
+.Editar form, .eliminar form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; 
+    width: 100%;
+    /* CLAVE: Asegura que el form tome toda la altura de la tarjeta */
+    height: 100%; 
+}
+
+.field-group {
+    display: flex; 
+    flex-direction: column;
+    gap: 1px;
+}
+
+.grid-editar-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* CLAVE: 2 columnas iguales */
+    gap: 6px; 
+    flex-grow: 1; 
+    margin-top: 2px;
+    padding-bottom: 2px; 
+}
+
+.grid-editar-fields .full-row {
+    grid-column: span 2;
+}
+
+
+.Editar input[type="button"], #botonEliminar {
+    background: var(--accent-blue); 
+    margin-top: auto; 
+}
+.contenedorProductos {
+    margin-top: 40px;
+}
+
+.mostrarProductos {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contenedorProducto {
+    width: 100%;
+    background: var(--card-light-bg);
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+.contenedorProducto img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.contenedorProducto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.informacion {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedorProducto .nombre {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: var(--primary-green);
+}
+
+.contenedorProducto .descripcion {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.contenedorProducto .precio {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.contenedorProducto .existencia {
+    font-size: 0.85em;
+    color: #555;
+    margin-top: 4px;
+}
+
+
+@media (max-width: 900px) {
+    .anadir form > *:not(#botonAnadir) { 
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor > div {
+        flex: 1 1 100%;
+        min-height: 0 !important; 
+    }
+    .anadir form > *:not(#botonAnadir) { 
+        grid-column: span 12;
+    }
+}
+
+/* Button variants for admin view */
+.button.button-add {
+    background: linear-gradient(90deg, #71f65c,#45b810);
+    box-shadow: 0 8px 18px rgba(5,150,105,0.12);
+}
+.button.button-edit {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    box-shadow: 0 8px 18px rgba(37,99,235,0.12);
+}
+.button.button-delete {
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+    box-shadow: 0 8px 18px rgba(239,68,68,0.12);
+}
+
+/* Admin products grid */
+.admin-view .contenedorProductos {
+    margin-top: 24px;
+}
+.admin-view .mostrarProductos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 12px;
+    margin-left: 80px;
+    align-items: stretch;
+}
+
+.admin-view .contenedorProducto {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #ffffff, #fbfffb);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.admin-view .contenedorProducto img {
+    border-radius: 10px;
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 6px;
+}
+
+.admin-view .informacion {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.admin-view .precio {
+    display: inline-block;
+    background: linear-gradient(90deg, #71f65c,#45b810);
+    color: rgb(17, 17, 17);
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 0.85rem;
+}
+
+.admin-view .nombre {
+    color: #064e3b;
+    font-size: 0.95rem;
+}
+
+.admin-view .descripcion {
+    color: var(--muted, #6b7280);
+    font-size: 0.85rem;
+    min-height: 25px;
+}
+
+.admin-view .contenedorProducto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(2,6,23,0.08);
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+    .contenedor > div { min-height: 0; }
+    .contenedor > div.anadir { flex-basis: 100%; }
+    .contenedor > div.Editar, .contenedor > div.eliminar { flex-basis: 100%; }
+}

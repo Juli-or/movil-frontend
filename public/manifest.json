@@ -1,0 +1,63 @@
+{
+"name": "Agrosoft: Gestión y Pedidos",
+  "short_name": "Agrosoft",
+  "description": "Sistema de gestión de productos y pedidos.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#21F356FF",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "es",
+  
+  "icons": [
+    {
+      "src": "/1.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/coffee-3911706.jpg",
+      "sizes": "96x96",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/corn-5151505.jpg",
+      "sizes": "128x128",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/food-3250439.jpg",
+      "sizes": "144x144",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/fruits-4728754.jpg",
+      "sizes": "152x152",
+      "type": "image/jpg"
+    }
+
+  ],
+  
+  "screenshots": [
+    {
+      "src": "/screenshot1.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  
+  "categories": ["business", "productivity", "utilities"],
+  
+  "shortcuts": [
+    {
+      "name": "Inicio Rápido",
+      "short_name": "Inicio",
+      "description": "Acceso rápido a la página principal",
+      "url": "/",
+      "icons": [{ "src": "/icon-96.png", "sizes": "96x96" }]
+    }
+  ]
+}

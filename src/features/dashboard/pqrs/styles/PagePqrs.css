@@ -1,0 +1,32 @@
+.page-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+  min-height: 100vh;
+  color: #111827;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.btn-primary {
+  background: #eb7125;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #af3d1e;
+}

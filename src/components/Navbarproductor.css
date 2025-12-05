@@ -1,0 +1,246 @@
+
+.custom-navbar-productor {
+   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%)
+}
+
+
+.brand-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #028b20;
+}
+
+.brand-text .highlight {
+  color: #ff6600e0;
+  border-bottom: 3px solid #ff6600e0;
+  padding-bottom: 2px;
+}
+
+
+.nav-links .nav-link {
+  position: relative;
+  margin-right: 1.5rem; 
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffffffe0 !important;
+  transition: color 0.3s ease;
+}
+
+.nav-links .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;   
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ff6600e0;
+  transition: width 0.3s ease;
+}
+
+.nav-links .nav-link:hover {
+  color: #ff6600e0 !important;
+}
+
+.nav-links .nav-link:hover::after {
+  width: 100%;
+}
+
+
+.nav-links .nav-link.active {
+  color: #ff6600e0 !important;
+}
+
+.nav-links .nav-link.active::after {
+  width: 100%;
+}
+
+
+.cart-link svg {
+  color: #ff6600e0;
+  transition: transform 0.2s ease;
+}
+
+.cart-link svg:hover {
+  transform: scale(1.2);
+}
+
+
+.user-dropdown {
+  position: relative;
+}
+
+.user-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #ff6600e0;
+  object-fit: cover;
+}
+
+
+.dropdown-menu-custom {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background: #f1f1f1;
+  border-radius: 8px;
+  padding: 10px;
+  width: 180px;
+  box-shadow: 0 4px 8px rgba(255, 102, 0, 0.5);
+  z-index: 1000;
+}
+
+.dropdown-username {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 5px 10px;
+  color: #000000e0;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #ff6600e0;
+  color: #fff;
+}
+
+.nav-icon {
+  font-size: 1rem;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.nav-links .nav-link:hover .nav-icon {
+  color: #ff6600e0;
+}
+
+.nav-links .nav-link.active .nav-icon {
+  color: #ff6600e0;
+}
+
+/* Icono de usuario cuando no hay imagen */
+.user-avatar-icon {
+  color: #ff6600e0;
+  border: 2px solid #ff6600e0;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+/* Mejoras para el dropdown */
+.dropdown-header {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-email {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: #ddd;
+  margin: 8px 0;
+}
+
+/* Botón de logout específico */
+.logout-btn {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  color: #dc3545;
+}
+
+.logout-btn:hover {
+  background-color: #fff5f5;
+  color: #dc3545;
+}
+
+/* Enlace de registro con estilo especial */
+.register-link {
+  color: #ff6600e0 !important;
+  font-weight: 600;
+}
+
+.register-link:hover {
+  color: #ff4500 !important;
+}
+
+
+/* 🔵 ESTILOS AZULES PARA BOTONES DE AUTENTICACIÓN */
+.auth-buttons .login-link {
+  color: #e67300 !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.auth-buttons .login-link:hover {
+  color: #e67300 !important;
+  text-decoration: none;
+}
+
+.auth-buttons .register-link {
+  color: #e67300 !important;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.auth-buttons .register-link:hover {
+  color: #e67300 !important;
+  text-decoration: none;
+}
+
+/* Efecto de subrayado al hover para coincidir con el estilo existente */
+.auth-buttons .nav-link {
+  position: relative;
+}
+
+.auth-buttons .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #e67300 ;
+  transition: width 0.3s ease;
+}
+
+.auth-buttons .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Iconos azules */
+.auth-buttons .nav-link svg {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.auth-buttons .nav-link:hover svg {
+  color: white;
+}
+/* Responsive para iconos */
+@media (max-width: 768px) {
+  .nav-icon {
+    margin-right: 8px;
+  }
+  
+  .auth-buttons .nav-link {
+    padding: 8px 12px;
+  }
+}

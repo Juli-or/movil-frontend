@@ -1,0 +1,116 @@
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #162b14;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+.sidebar.collapsed {
+  transform: translateX(-100%);
+}
+.logout-btn-sidebar{
+  margin-top: auto;
+  width: 90%;
+  margin-left: 5%;
+  padding: 10px;
+  background-color: #e63946;
+  color:white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.logout-btn-sidebar:hover{
+  background-color: #d62828;
+}
+.sidebar-title {
+  font-size: 1.7em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #f1f4f6;
+  font-weight: bold;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #f9fafb;
+  font-size: 20px;
+  padding: 8px 12px;
+  display: block;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  background: #e97232;
+  color: #fff;
+}
+
+/* Botón hamburguesa */
+.hamburger-btn {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  background: #e97232;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger-btn:hover {
+  background: #e43838;
+}
+
+/* Contenido principal */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Cuando el sidebar está abierto */
+.main-content.shifted {
+  margin-left: 220px;
+}
+
+.logo {
+  size: 20px;
+    border-radius: 10%;
+    width: 90px; 
+    height: 95px; 
+    object-fit: cover;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 0 0 5px rgba(183, 235, 62, 0.8); 
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: block;
+    margin: 20px auto;
+}
+
+.logo:hover {
+    transform: scale(1.04); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
