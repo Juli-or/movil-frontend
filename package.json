@@ -29,10 +29,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI=false react-scripts build",
-    "build-pwa": "react-scripts build && workbox generateSW workbox-config.js",
-    "test": "CI=false react-scripts test --watchAll=false",
+    "build": "cross-env CI=false react-scripts build",
+    "build-pwa": "cross-env CI=false react-scripts build && workbox generateSW workbox-config.js",
+    "test": "cross-env CI=false react-scripts test --watchAll=false",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
   },
   "eslintConfig": {
     "extends": [
