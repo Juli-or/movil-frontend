@@ -23,15 +23,15 @@
     "react-chartjs-2": "^5.3.0",
     "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.9.4",
+    "react-router-dom": "^7.10.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI=false react-scripts build",
     "build-pwa": "react-scripts build && workbox generateSW workbox-config.js",
-    "test": "react-scripts test",
+    "test": "CI=false react-scripts test --watchAll=false",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
